@@ -10,7 +10,7 @@ const test = base.extend({
       return;
     }
 
-    const coverageSrcResolved = coverageSrc ? path.resolve(coverageSrc) : '';
+    const coverageSrcResolved = coverageSrc ? path.resolve(coverageSrc) : "";
 
     await page.coverage.startJSCoverage();
     await use(page);
