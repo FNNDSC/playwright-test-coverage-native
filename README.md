@@ -1,8 +1,25 @@
 # playwright-test-coverage-native
 
+[![License](https://img.shields.io/npm/l/playwright-test-coverage-native)](https://github.com/FNNDSC/playwright-test-coverage-native/blob/main/LICENSE)
+[![Version](https://img.shields.io/npm/v/playwright-test-coverage-native)](https://www.npmjs.com/package/playwright-test-coverage-native)
+
 Measure test coverage with Playwright.
 Its only dependency is `@playwright/test` — unlike its [alternatives](#alternatives), `playwright-test-coverage-native` uses Playwright's 
 [built-in coverage functionality](https://playwright.dev/docs/api/class-coverage) without [Istanbul](https://istanbul.js.org/).
+
+## Installation
+
+Using NPM:
+
+```shell
+npm i -D playwright-test-coverage-native
+```
+
+Using [PNPM](https://pnpm.io/):
+
+```shell
+pnpm i -D playwright-test-coverage-native
+```
 
 ## Configuration
 
@@ -30,7 +47,7 @@ export default defineConfig({
 > [!NOTE]  
 > Coverage APIs are only supported on Chromium-based browsers.
 
-## Usage
+## Post-processing
 
 Install [c8](https://www.npmjs.com/package/c8).
 
