@@ -1,0 +1,25 @@
+{
+  "name": "playwright-test-coverage-native",
+  "version": "0.1.0",
+  "description": "Extends Playwright for measuring code-coverage (built-in v8 coverage, no Istanbul)",
+  "keywords": [
+    "playwright",
+    "coverage",
+    "v8"
+  ],
+  "author": "FNNDSC <dev@babyMRI.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.41.1",
+    "@types/node": "^20.11.5"
+  },
+  "peerDependencies": {
+    "@playwright/test": "^1.41.1"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  }
+}
