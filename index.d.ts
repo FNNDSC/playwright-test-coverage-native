@@ -1,11 +1,11 @@
 import type { PlaywrightTestConfig as BasePlaywrightTestConfig, test as originalTest } from "@playwright/test";
 
-export type PlaywrightTestConfig<T = {}, W = {}> = Omit<BasePlaywrightTestConfig<T, W>, "use"> & {
-  use?: BasePlaywrightTestConfig<T, W>["use"] & {
-    coverageDir?: string,
-    coverageSrc?: string
-  };
+type CoverageOptions = {
+  coverageDir?: string,
+  coverageSrc?: string
 };
+
+export type PlaywrightTestConfig<T = {}, W = {}> = BasePlaywrightTestConfig<T, W & CoverageOptions>;
 
 export function defineConfig(config: PlaywrightTestConfig): PlaywrightTestConfig;
 export function defineConfig<T>(config: PlaywrightTestConfig<T>): PlaywrightTestConfig<T>;
