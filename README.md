@@ -37,7 +37,9 @@ export default defineConfig({
       use: {
         ...devices["Desktop Chrome"],
         coverageDir: './coverage/tmp',  // output location for coverage data
-        coverageSrc: './src'            // filter coverage data for only files in ./src (optional)
+        coverageSrc: './src',           // filter coverage data for only files in ./src (optional)
+        // one of: '@fs', 'localhosturl'. Sadly you'll just have to play around to see which one works
+        coverageSourceMapHandler: '@fs'
       },
     },
   ],
