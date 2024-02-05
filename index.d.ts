@@ -2,7 +2,8 @@ import type { PlaywrightTestConfig as BasePlaywrightTestConfig, test as original
 
 type CoverageOptions = {
   coverageDir?: string,
-  coverageSrc?: string
+  coverageSrc?: string,
+  coverageSourceMapHandler?: "@fs" | "localhosturl"
 };
 
 export type PlaywrightTestConfig<T = {}, W = {}> = BasePlaywrightTestConfig<T, W & CoverageOptions>;
