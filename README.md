@@ -60,5 +60,9 @@ see `c8 report --help` for more options.
 
 ## Alternatives
 
+> [!NOTE]  
+> V8 code coverage can be inaccurate due to JavaScript code transformation and source maps,
+> in which case alternatives (which use istanbul) may be preferable.
+
 - https://github.com/anishkny/playwright-test-coverage (requires [babel-plugin-istanbul](https://github.com/istanbuljs/babel-plugin-istanbul) instrumentation)
 - https://github.com/mxschmitt/playwright-test-coverage (requires [vite-plugin-istanbul](https://github.com/ifaxity/vite-plugin-istanbul))
