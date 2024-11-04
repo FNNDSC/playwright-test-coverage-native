@@ -49,6 +49,22 @@ export default defineConfig({
 > [!NOTE]  
 > Coverage APIs are only supported on Chromium-based browsers.
 
+## Usage
+
+`playwright-test-coverage-native` is a drop-in replacement for `@playwright/test`. Edit the import of your test files like this:
+
+```diff
+-import { test, expect } from '@playwright/test';
++import { test, expect } from 'playwright-test-coverage-native';
+```
+
+If you're brave, you can do the changes in bulk:
+
+```shell
+# using GNU coreutils
+find -type f -name '*.test.?s' -exec sed -i -e 's#@playwright/test#playwright-test-coverage-native#' \;
+```
+
 ## Post-processing
 
 Install [c8](https://www.npmjs.com/package/c8).
