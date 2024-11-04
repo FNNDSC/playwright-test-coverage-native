@@ -17,7 +17,7 @@ const test = base.extend({
       urlReplacer = (url) => url.replace(/^.+@fs/, "");
     } else if (coverageSourceMapHandler === "localhosturl") {
       const absPath = path.resolve(".");
-      urlReplacer = (url) => url.replace(/http:\/\/localhost:\d+/, absPath);
+      urlReplacer = (url) => url.replace(/http:\/\/(.+\.)?localhost:\d+/, absPath);
     }
 
     await page.coverage.startJSCoverage();
