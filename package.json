@@ -1,6 +1,6 @@
 {
   "name": "playwright-test-coverage-native",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Extends Playwright for measuring code-coverage (built-in v8 coverage, no Istanbul)",
   "keywords": [
     "playwright",
